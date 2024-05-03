@@ -1,5 +1,4 @@
 ﻿using Library.API.Infrastructure.Entity;
-using Microsoft.AspNetCore.Mvc.Formatters;
 
 namespace Library.API.Infrastructure
 {
