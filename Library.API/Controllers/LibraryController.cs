@@ -86,33 +86,38 @@ namespace Library.API.Controllers
 
 
         // Other typical Library functions...
-
+        [HttpPost("loan")]
         public async Task<ActionResult<LoanResponse>> Loan([FromBody] LoanRequest loanRequest)
         {
             return Ok();
         }
 
+        [HttpPost("renew")]
         public async Task<ActionResult<RenewResponse>> Renew([FromBody] RenewRequest renewRequest)
         {
             return Ok();
         }
 
+        [HttpPost("reserve")]
         public async Task<ActionResult<ReservationResponse>> Reserve([FromBody] ReservationRequest reservationRequest)
         {
             return Ok();
         }
 
+        [HttpPost("member/details/{membershipNumber}")]
         public ActionResult MemberDetails(string membershipNumber)
         {
             // return Ok(_memberRepository.Get(membershipNumber));
             return Ok();
         }
 
+        [HttpPost("pay-fine/{membershipNumber}")]
         public ActionResult PayFine(string membershipNumber, decimal amount)
         {
             return Ok();
         }
 
+        [HttpPost("return/{memebershipNumber}")]
         public async Task<ActionResult> Return(string memebershipNumber, string isbn)
         {
             // Calculate late fee
@@ -124,6 +129,7 @@ namespace Library.API.Controllers
             return Ok();
         }
 
+        [HttpPost("categorise/{isbn}")]
         // Good example of using Decorator pattern to update book values
         public ActionResult Categorise(string isbn, string category = "Young Adult Fiction")
         {
