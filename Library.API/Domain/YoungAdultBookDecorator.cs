@@ -2,7 +2,7 @@
 {
     public class YoungAdultBookDecorator : BookDecorator
     {
-        private const string CATEGORY = "Young Adult Ficton";
+        private const string CATEGORY = "Young Adult Fiction";
         public YoungAdultBookDecorator(ABook aBook) : base(aBook)
         {
         }

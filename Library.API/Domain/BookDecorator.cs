@@ -2,7 +2,7 @@
 {
     public abstract class BookDecorator : ABook
     {
-        protected ABook _aBook;
+        protected ABook _aBook { get; set; }
 
         public BookDecorator(ABook aBook)
         {
