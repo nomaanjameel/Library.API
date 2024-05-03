@@ -25,5 +25,42 @@ namespace Library.API.Test.Infrastructure.Repository
             Assert.Equal(1, results.Count());
             Assert.Equal(expectedTitle, results.First().Title);
         }
+
+        [Fact(Skip = "Todo")]
+        public void BookRespository_FindByISBN_ShouldFindBook()
+        {
+
+        }
+
+        [Fact(Skip = "Todo")]
+        public void BookRespository_Add_ShouldSaveBook()
+        {
+
+        }
+
+        [Fact(Skip = "Todo")]
+        public void BookRespository_Update_ShouldUpdateBook()
+        {
+
+        }
+
+        // Unhappy path tests
+        [Fact(Skip = "Todo")]
+        public void BookRespository_FindByISBN_ShouldThrowNotFoundException()
+        {
+
+        }
+
+        [Fact(Skip = "Todo")]
+        public void BookRespository_Add_ShouldThrowBadRequestException()
+        {
+
+        }
+
+        [Fact(Skip = "Todo")]
+        public void BookRespository_Update_ShouldThrowBadRequestException()
+        {
+
+        }
     }
 }

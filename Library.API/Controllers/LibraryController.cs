@@ -136,40 +136,4 @@ namespace Library.API.Controllers
             return Ok();
         }
     }
-
-    abstract class BookDecorator : ABook
-    {
-        protected ABook _aBook;
-
-        public BookDecorator(ABook aBook)
-        {
-            _aBook = aBook;
-        }
-
-        public void SetBook(ABook aBook)
-        {
-            _aBook = aBook;
-        }
-
-        public override void SetCategory()
-        {
-            if (_aBook != null)
-            {
-                _aBook.SetCategory();
-            }
-        }
-    }
-
-    class YoungAdultBookDecorator : BookDecorator
-    {
-        private const string CATEGORY = "Young Adult Ficton";
-        public YoungAdultBookDecorator(ABook aBook) : base(aBook)
-        {
-        }
-
-        public override void SetCategory()
-        {
-            base.Category = CATEGORY;
-        }
-    }
 }
